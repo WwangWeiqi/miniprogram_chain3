@@ -360,10 +360,10 @@ var XMLHttpRequest = /** @class */ (function (_super) {
      */
   // const regeneratorRuntime = require('../regenerator/runtime.js');
     XMLHttpRequest.prototype.send = function (data) {
-     console.log(data);
+    //  console.log(data);
      return new Promise((resolve,reject)=>{
         var _this = this;
-       console.log(this);
+      //  console.log(this);
         if (this.__readyState !== this.OPENED) {
             throw new Error("Failed to execute 'send' on 'XMLHttpRequest': The object's state must be OPENED.");
         }
@@ -395,7 +395,7 @@ var XMLHttpRequest = /** @class */ (function (_super) {
             data: data,
             dataType: 'json',
             success: function (res) {
-              console.log("suc", res)
+              // console.log("suc", res)
                 if (_this.__haveTimeout || _this.__aborted)
                     return;
                 timer && clearTimeout(timer);
@@ -409,7 +409,7 @@ var XMLHttpRequest = /** @class */ (function (_super) {
                 }
             },
             fail: function (res) {
-              console.log("fail",res)
+              // console.log("fail",res)
                 if (_this.__haveTimeout || _this.__aborted)
                     return;
                 timer && clearTimeout(timer);
@@ -422,7 +422,7 @@ var XMLHttpRequest = /** @class */ (function (_super) {
 
             },
             complete: function () {
-              console.log("complete")
+              // console.log("complete")
                 if (_this.__haveTimeout || _this.__aborted)
                     return;
                 _this.__readyState = _this.HEADERS_RECEIVED;

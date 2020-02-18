@@ -6776,7 +6776,7 @@ module.exports =
           await bytes.then(data=>{
             bytes = data;
           })
-          console.log(bytes,offset,name)
+          // console.log(bytes,offset,name)
           if (this.isDynamicArray(name)) {
 
             return (function () {
@@ -42842,7 +42842,7 @@ module.exports =
 
           HttpProvider.prototype.send = async function (payload) { //debugpoint
             var request = this.prepareRequest(false);
-        console.log(payload)
+        // console.log(payload)
             // console.log("request",request)
             // console.log("before result", request.__response)
 
